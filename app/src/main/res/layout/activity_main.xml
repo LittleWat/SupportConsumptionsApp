@@ -13,6 +13,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:text="@string/select_commodity"
+        android:textSize="40sp"
         />
 
     <GridView
