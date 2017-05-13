@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
                         new AlertDialog.Builder(MainActivity.this)
                                 .setTitle(commodity.getName() + " is selected")
-                                .setMessage("Are you sure to send a slack message to " + commodity.getStaff_name() + " ?")
+                                .setMessage("Are you sure to send a slack message to " + commodity.getStaff_name() + " at #" + commodity.getChannel_name() + " channel ?")
                                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
