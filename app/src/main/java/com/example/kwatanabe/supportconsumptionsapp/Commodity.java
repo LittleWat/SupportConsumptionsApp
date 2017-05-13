@@ -47,6 +47,10 @@ public class Commodity {
         return name;
     }
 
+    public String getStaff_name() {
+        return staff_name;
+    }
+
     public String getChannel_name() {
         return channel_name;
     }

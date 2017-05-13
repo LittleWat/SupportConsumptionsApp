@@ -1,13 +1,14 @@
 package com.example.kwatanabe.supportconsumptionsapp;
 
+import android.content.DialogInterface;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.GridView;
@@ -133,8 +134,20 @@ public class MainActivity extends AppCompatActivity {
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        AsyncSlackMessage asyncSlackMessage = new AsyncSlackMessage(MainActivity.this, commodity);
-                        asyncSlackMessage.execute(commodity.toMessage());
+
+                        new AlertDialog.Builder(MainActivity.this)
+                                .setTitle(commodity.getName() + " is selected")
+                                .setMessage("Are you sure to send a slack message to " + commodity.getStaff_name() + " ?")
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        // OK button pressed
+                                        AsyncSlackMessage asyncSlackMessage = new AsyncSlackMessage(MainActivity.this, commodity);
+                                        asyncSlackMessage.execute(commodity.toMessage());
+                                    }
+                                })
+                                .setNegativeButton("Cancel", null)
+                                .show();
                     }
                 });
 
