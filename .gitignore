@@ -13,10 +13,8 @@
 /app/src/main/res/values/strings.xml
 
 .idea/
-build.gradle
 gradle/
 gradlew
 gradlew.bat
-settings.gradle
 settings.gradle
 *.iml
