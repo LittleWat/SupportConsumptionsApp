@@ -1,0 +1,10 @@
+{
+    "general": {
+        "items": ["Paper", "Tonar"],
+        "staff": "Andy"
+    },
+    "random": {
+        "items": ["Water", "Coke", "Beer"],
+        "staff": "Mike"
+    }
+}
