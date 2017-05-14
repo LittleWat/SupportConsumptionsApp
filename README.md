@@ -5,7 +5,7 @@ You can open this project using AndroidStudio.
 
 In this app, [simple slack api](https://github.com/Ullink/simple-slack-api) is used.
 
-![Demo](https://drive.google.com/file/d/0B76zzWPsUrvCeWRsV1BnM0VsZm8/view?usp=sharing)
+![Demo](https://github.com/LittleWat/SupportConsumptionsApp/blob/master/2017_05_14_15_37_46.gif)
 
 
 ## How to Use
